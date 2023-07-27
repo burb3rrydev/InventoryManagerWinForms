@@ -124,26 +124,31 @@
             // 
             // btnAddInventory
             // 
-            btnAddInventory.Location = new Point(128, 143);
+            btnAddInventory.BackColor = SystemColors.Window;
+            btnAddInventory.Location = new Point(128, 131);
             btnAddInventory.Name = "btnAddInventory";
-            btnAddInventory.Size = new Size(124, 23);
+            btnAddInventory.Size = new Size(124, 35);
             btnAddInventory.TabIndex = 10;
             btnAddInventory.Text = "Add To Invenotry";
-            btnAddInventory.UseVisualStyleBackColor = true;
+            btnAddInventory.UseVisualStyleBackColor = false;
+            btnAddInventory.Click += btnAddInventory_Click_1;
             // 
             // btnClear
             // 
-            btnClear.Location = new Point(282, 143);
+            btnClear.BackColor = SystemColors.Window;
+            btnClear.Location = new Point(282, 131);
             btnClear.Name = "btnClear";
-            btnClear.Size = new Size(124, 23);
+            btnClear.Size = new Size(124, 35);
             btnClear.TabIndex = 11;
             btnClear.Text = "Clear Fields";
-            btnClear.UseVisualStyleBackColor = true;
+            btnClear.UseVisualStyleBackColor = false;
+            btnClear.Click += btnClear_Click_1;
             // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.MenuHighlight;
             ClientSize = new Size(551, 309);
             Controls.Add(btnClear);
             Controls.Add(btnAddInventory);
