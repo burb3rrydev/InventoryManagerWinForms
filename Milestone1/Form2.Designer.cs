@@ -45,7 +45,7 @@
             // lbAddName
             // 
             lbAddName.AutoSize = true;
-            lbAddName.Location = new Point(13, 14);
+            lbAddName.Location = new Point(12, 34);
             lbAddName.Name = "lbAddName";
             lbAddName.Size = new Size(39, 15);
             lbAddName.TabIndex = 0;
@@ -53,7 +53,7 @@
             // 
             // tbName
             // 
-            tbName.Location = new Point(58, 11);
+            tbName.Location = new Point(65, 31);
             tbName.Name = "tbName";
             tbName.Size = new Size(100, 23);
             tbName.TabIndex = 1;
@@ -61,7 +61,7 @@
             // lbAddQty
             // 
             lbAddQty.AutoSize = true;
-            lbAddQty.Location = new Point(177, 14);
+            lbAddQty.Location = new Point(188, 34);
             lbAddQty.Name = "lbAddQty";
             lbAddQty.Size = new Size(26, 15);
             lbAddQty.TabIndex = 2;
@@ -69,7 +69,7 @@
             // 
             // tbQty
             // 
-            tbQty.Location = new Point(209, 12);
+            tbQty.Location = new Point(233, 31);
             tbQty.Name = "tbQty";
             tbQty.Size = new Size(100, 23);
             tbQty.TabIndex = 3;
@@ -77,7 +77,7 @@
             // lbAddPrice
             // 
             lbAddPrice.AutoSize = true;
-            lbAddPrice.Location = new Point(339, 15);
+            lbAddPrice.Location = new Point(360, 34);
             lbAddPrice.Name = "lbAddPrice";
             lbAddPrice.Size = new Size(33, 15);
             lbAddPrice.TabIndex = 4;
@@ -85,7 +85,7 @@
             // 
             // tbPrice
             // 
-            tbPrice.Location = new Point(378, 12);
+            tbPrice.Location = new Point(410, 31);
             tbPrice.Name = "tbPrice";
             tbPrice.Size = new Size(100, 23);
             tbPrice.TabIndex = 5;
@@ -93,7 +93,7 @@
             // lbAddCategory
             // 
             lbAddCategory.AutoSize = true;
-            lbAddCategory.Location = new Point(13, 59);
+            lbAddCategory.Location = new Point(30, 109);
             lbAddCategory.Name = "lbAddCategory";
             lbAddCategory.Size = new Size(55, 15);
             lbAddCategory.TabIndex = 6;
@@ -101,15 +101,15 @@
             // 
             // tbCategory
             // 
-            tbCategory.Location = new Point(74, 56);
+            tbCategory.Location = new Point(91, 104);
             tbCategory.Name = "tbCategory";
-            tbCategory.Size = new Size(100, 23);
+            tbCategory.Size = new Size(123, 23);
             tbCategory.TabIndex = 7;
             // 
             // lbAddDescription
             // 
             lbAddDescription.AutoSize = true;
-            lbAddDescription.Location = new Point(209, 59);
+            lbAddDescription.Location = new Point(239, 104);
             lbAddDescription.Name = "lbAddDescription";
             lbAddDescription.Size = new Size(67, 15);
             lbAddDescription.TabIndex = 8;
@@ -117,15 +117,15 @@
             // 
             // tbDescription
             // 
-            tbDescription.Location = new Point(282, 56);
+            tbDescription.Location = new Point(312, 101);
             tbDescription.Name = "tbDescription";
-            tbDescription.Size = new Size(100, 23);
+            tbDescription.Size = new Size(166, 23);
             tbDescription.TabIndex = 9;
             // 
             // btnAddInventory
             // 
             btnAddInventory.BackColor = SystemColors.Window;
-            btnAddInventory.Location = new Point(128, 131);
+            btnAddInventory.Location = new Point(108, 175);
             btnAddInventory.Name = "btnAddInventory";
             btnAddInventory.Size = new Size(124, 35);
             btnAddInventory.TabIndex = 10;
@@ -136,7 +136,7 @@
             // btnClear
             // 
             btnClear.BackColor = SystemColors.Window;
-            btnClear.Location = new Point(282, 131);
+            btnClear.Location = new Point(312, 175);
             btnClear.Name = "btnClear";
             btnClear.Size = new Size(124, 35);
             btnClear.TabIndex = 11;

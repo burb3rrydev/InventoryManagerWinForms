@@ -33,6 +33,9 @@
             btnAdd = new Button();
             btnRemove = new Button();
             dgvInventory = new DataGridView();
+            tbSearch = new TextBox();
+            btnSearch = new Button();
+            btnSave = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvInventory).BeginInit();
             SuspendLayout();
             // 
@@ -60,9 +63,9 @@
             // 
             btnAdd.BackColor = SystemColors.Window;
             btnAdd.ForeColor = SystemColors.ActiveCaptionText;
-            btnAdd.Location = new Point(198, 290);
+            btnAdd.Location = new Point(16, 290);
             btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(132, 30);
+            btnAdd.Size = new Size(207, 30);
             btnAdd.TabIndex = 12;
             btnAdd.Text = "Add Item";
             btnAdd.UseVisualStyleBackColor = false;
@@ -71,9 +74,9 @@
             // btnRemove
             // 
             btnRemove.BackColor = SystemColors.Window;
-            btnRemove.Location = new Point(371, 290);
+            btnRemove.Location = new Point(245, 290);
             btnRemove.Name = "btnRemove";
-            btnRemove.Size = new Size(129, 30);
+            btnRemove.Size = new Size(207, 30);
             btnRemove.TabIndex = 14;
             btnRemove.Text = "Remove Item";
             btnRemove.UseVisualStyleBackColor = false;
@@ -91,12 +94,45 @@
             dgvInventory.Size = new Size(664, 243);
             dgvInventory.TabIndex = 21;
             // 
+            // tbSearch
+            // 
+            tbSearch.Location = new Point(472, 12);
+            tbSearch.Name = "tbSearch";
+            tbSearch.Size = new Size(126, 23);
+            tbSearch.TabIndex = 22;
+            // 
+            // btnSearch
+            // 
+            btnSearch.BackColor = SystemColors.Window;
+            btnSearch.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnSearch.Location = new Point(604, 12);
+            btnSearch.Name = "btnSearch";
+            btnSearch.Size = new Size(75, 23);
+            btnSearch.TabIndex = 23;
+            btnSearch.Text = "Search";
+            btnSearch.UseVisualStyleBackColor = false;
+            btnSearch.Click += btnSearch_Click;
+            // 
+            // btnSave
+            // 
+            btnSave.BackColor = SystemColors.Window;
+            btnSave.Location = new Point(472, 290);
+            btnSave.Name = "btnSave";
+            btnSave.Size = new Size(207, 30);
+            btnSave.TabIndex = 24;
+            btnSave.Text = "Save To File";
+            btnSave.UseVisualStyleBackColor = false;
+            btnSave.Click += btnSave_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.MenuHighlight;
             ClientSize = new Size(691, 325);
+            Controls.Add(btnSave);
+            Controls.Add(btnSearch);
+            Controls.Add(tbSearch);
             Controls.Add(dgvInventory);
             Controls.Add(btnRemove);
             Controls.Add(btnAdd);
@@ -104,9 +140,10 @@
             Controls.Add(ddInventory);
             Name = "Form1";
             Text = "Inventory Manager";
-            Load += Form1_Load_1;
+            Load += Form1_Load1;
             ((System.ComponentModel.ISupportInitialize)dgvInventory).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -116,5 +153,8 @@
         private Button btnAdd;
         private Button btnRemove;
         private DataGridView dgvInventory;
+        private TextBox tbSearch;
+        private Button btnSearch;
+        private Button btnSave;
     }
 }

@@ -13,9 +13,12 @@ namespace Milestone1
 
         private InventoryItem originalItem; // Store the original item if in Edit mode
 
-        public Form2()
+        private Form1 _form1; // Reference to Form1
+
+        public Form2(Form1 form1)
         {
             InitializeComponent();
+            _form1 = form1;
         }
 
         // Constructor for Edit mode
@@ -23,6 +26,10 @@ namespace Milestone1
         {
             originalItem = item;
             FillTextBoxesWithItem(item);
+        }
+
+        public Form2()
+        {
         }
 
         private void FillTextBoxesWithItem(InventoryItem item)
@@ -37,11 +44,6 @@ namespace Milestone1
 
         private bool ValidateInput()
         {
-            // Implement your validation logic here
-            // For example, check if the required fields are filled, if the quantity and price are valid numbers, etc.
-            // You can use int.TryParse() to check if the quantity and price are valid integers.
-
-            // For simplicity, let's assume the input is always valid in this example.
             return true;
         }
 
@@ -56,40 +58,57 @@ namespace Milestone1
 
         private void btnAddInventory_Click_1(object sender, EventArgs e)
         {
+            // Check if the user input is valid
             if (ValidateInput())
             {
-                if (originalItem == null)
+                // Check if all required text boxes are not empty and if parsing quantity and price is successful
+                if (!string.IsNullOrWhiteSpace(tbName.Text) &&
+                    !string.IsNullOrWhiteSpace(tbDescription.Text) &&
+                    !string.IsNullOrWhiteSpace(tbCategory.Text) &&
+                    int.TryParse(tbQty.Text, out int quantity) && // Parse quantity from text box
+                    int.TryParse(tbPrice.Text, out int price))   // Parse price from text box
                 {
-                    // Add a new item
-                    NewItem = new InventoryItem
+                    if (originalItem == null)
                     {
-                        Name = tbName.Text,
-                        Quantity = int.Parse(tbQty.Text),
-                        Price = int.Parse(tbPrice.Text),
-                        Category = tbCategory.Text,
-                        Description = tbDescription.Text
-                    };
+                        // Add a new item
+                        NewItem = new InventoryItem
+                        {
+                            Name = tbName.Text,           // Set item name from text box
+                            Quantity = quantity,          // Set item quantity parsed from text box
+                            Price = price,                // Set item price parsed from text box
+                            Category = tbCategory.Text,   // Set item category from text box
+                            Description = tbDescription.Text // Set item description from text box
+                        };
+                    }
+                    else
+                    {
+                        // Modify the existing item
+                        ModifiedItem = new InventoryItem
+                        {
+                            Name = tbName.Text,           // Set item name from text box
+                            Quantity = quantity,          // Set item quantity parsed from text box
+                            Price = price,                // Set item price parsed from text box
+                            Category = tbCategory.Text,   // Set item category from text box
+                            Description = tbDescription.Text // Set item description from text box
+                        };
+                    }
+                    this.Close(); // Close the form
                 }
                 else
                 {
-                    // Modify the existing item
-                    ModifiedItem = new InventoryItem
-                    {
-                        Name = tbName.Text,
-                        Quantity = int.Parse(tbQty.Text),
-                        Price = int.Parse(tbPrice.Text),
-                        Category = tbCategory.Text,
-                        Description = tbDescription.Text
-                    };
+                    // Show an error message if any input is missing or invalid
+                    MessageBox.Show("Please fill in all attributes correctly.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                this.Close();
             }
         }
+
+
 
         private void btnClear_Click_1(object sender, EventArgs e)
         {
             ClearTextBoxes();
         }
+
     }
 }
 
