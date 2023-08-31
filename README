@@ -1,0 +1,63 @@
+Inventory Management System
+
+This program is an inventory management system that allows you to manage and organize items in an inventory. It features a graphical user interface (GUI) that allows users to add, edit, and remove items from the inventory, as well as filter and search for specific items. The program uses the C# programming language and utilizes Windows Forms for the user interface.
+
+Features
+
+Add new items to the inventory by providing attributes such as Name, Quantity, Price, Category, and Description.
+Edit existing items by selecting them from the list and updating their attributes.
+Remove items from the inventory individually or in bulk.
+Filter items by category or display all items.
+Search for items by name, providing a partial or complete name.
+Sort items by different attributes such as name, category, or price.
+Save the current inventory to a text file for future reference.
+Getting Started
+
+To use the inventory management system, follow these steps:
+
+Clone or download this repository to your local machine.
+Open the solution in Visual Studio or another compatible C# IDE.
+Build and run the application to launch the GUI.
+
+Usage
+
+Adding Items
+
+Click the "Add" button to open the "Add Item" dialog.
+Fill in the attributes for the new item: Name, Quantity, Price, Category, and Description.
+Click the "Save" button to add the item to the inventory.
+Editing Items
+Select an item from the list.
+Click the "Edit" button to open the "Edit Item" dialog.
+Modify the attributes you wish to change.
+Click the "Save" button to update the item's information.'
+
+Removing Items
+
+Select one or more items from the list.
+Click the "Remove" button to remove the selected items from the inventory.
+Filtering Items
+Use the dropdown menu to select a category or "Show All" to display all items.
+The list will be updated to show items from the selected category.
+Searching for Items
+Enter a partial or complete name of the item in the search box.
+Click the "Search" button to find items with matching names.
+The list will display the found item(s) or show a message if no match is found.
+
+Sorting Items
+
+Use the dropdown menu to select a sorting option (e.g., name ascending, name descending).
+The list will be sorted according to the selected sorting option.
+Saving Inventory
+Click the "Save" button to save the current inventory to a text file.
+The file will be saved in your Downloads folder with the name "Inventory.txt".
+
+Notes
+
+The program uses the InventoryItem class to represent items in the inventory.
+The InventoryManager class manages the inventory operations using a List<InventoryItem>.
+The GUI is built using Windows Forms and provides an intuitive interface for interacting with the inventory.
+
+Contributors
+
+This program was developed by burb3rrydev.
